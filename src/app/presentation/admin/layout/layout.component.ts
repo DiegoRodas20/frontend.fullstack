@@ -8,12 +8,8 @@ import { Component, OnInit } from "@angular/core";
 
 export class LayoutComponent implements OnInit{
 
-    olivos: string = 'HOLA SAMUEL'
-
     constructor() { }
 
-    ngOnInit(){
-        this.olivos = 'HOLA MOISES'
-    }
+    ngOnInit(){}
 
 }
