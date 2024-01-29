@@ -6,10 +6,25 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ['layout.component.scss']
 })
 
-export class LayoutComponent implements OnInit{
+export class LayoutComponent implements OnInit {
 
-    constructor() { }
+    sidebarVisible: boolean = false
+    options: string[] = []
 
-    ngOnInit(){}
+    constructor(
+        
+    ) { }
+
+    ngOnInit() { 
+        this.setOptions()
+    }
+
+    public updateSidebar() {
+        this.sidebarVisible = !this.sidebarVisible
+    }
+
+    private setOptions() {
+        this.options = ["Categorias", "Productos", "Orden de compra"]
+    }
 
 }

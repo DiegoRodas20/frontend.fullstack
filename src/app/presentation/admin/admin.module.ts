@@ -4,6 +4,7 @@ import { AdminRouting } from "./admin.routing";
 import { CategoriesComponent } from "./categories/categories.component";
 import { LayoutComponent } from "./layout/layout.component";
 import { PrimeNGModule } from "../../shared/primeng/primeng.module";
+import { CommonModule } from "@angular/common";
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { PrimeNGModule } from "../../shared/primeng/primeng.module";
         LayoutComponent
     ],
     imports: [
+        CommonModule,
         RouterModule,
         AdminRouting,
         PrimeNGModule
