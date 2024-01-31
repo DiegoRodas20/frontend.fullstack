@@ -11,11 +11,9 @@ export class LayoutComponent implements OnInit {
     sidebarVisible: boolean = false
     options: string[] = []
 
-    constructor(
-        
-    ) { }
+    constructor() { }
 
-    ngOnInit() { 
+    ngOnInit() {
         this.setOptions()
     }
 

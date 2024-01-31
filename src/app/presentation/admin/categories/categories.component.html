@@ -1,16 +1,10 @@
-<div>CATEGORIAS COMPONENTE</div>
+<div >
+    <h1>{{nameFather}}</h1>
+    <p-button (onClick)="setName()">Cambio de nombre</p-button>
 
-<div class="grid">
-    <div class="col-12 md:col-6 lg:col-3">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-    </div>
-    <div class="col-12 md:col-6 lg:col-3">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-    </div>
-    <div class="col-12 md:col-6 lg:col-3">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-    </div>
-    <div class="col-12 md:col-6 lg:col-3">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-    </div>
+    <app-filter-categories 
+        [prueba]="name"
+        (pruebaSalida)="setOutput($event)">
+    </app-filter-categories>
+
 </div>
