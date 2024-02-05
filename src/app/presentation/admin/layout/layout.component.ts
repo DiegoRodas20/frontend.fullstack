@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ADMIN_PATH } from "../../../shared/routes/admin.routes";
+import { Route, Router } from "@angular/router";
 
 @Component({
     selector: 'app-layout',
@@ -9,7 +11,7 @@ import { Component, OnInit } from "@angular/core";
 export class LayoutComponent implements OnInit {
 
     sidebarVisible: boolean = false
-    options: string[] = []
+    options: any[] = []
 
     constructor() { }
 
@@ -22,7 +24,20 @@ export class LayoutComponent implements OnInit {
     }
 
     private setOptions() {
-        this.options = ["Categorias", "Productos", "Orden de compra"]
-    }
 
+        this.options = [
+            {
+                name: 'Categorias',
+                path: ADMIN_PATH.CATEGORIES
+            },
+            {
+                name: 'Productos',
+                path: ADMIN_PATH.PRODUCTS
+            },
+            {
+                name: 'Orden de compra',
+                path: ADMIN_PATH.PURCHASE_ORDER
+            }
+        ]
+    }
 }

@@ -1,17 +1,10 @@
 <div class="grid">
 
-    <h1>{{prueba}}</h1>
+    <!-- <form [form]="formGroup">
+    </form> -->
+    <input id="name1" type="text" pInputText formControlName="name"/>
+    <input id="name2" type="text" pInputText formControlName="name1"/>
+    <input id="name3" type="text" pInputText formControlName="name2"/>
+    <input id="name4" type="text" pInputText formControlName="name3"/>
 
-    <div class="col-12 md:col-6 lg:col-3">
-        <p-button (onClick)="setOutput()">Output</p-button>
-    </div>
-    <!-- <div class="col-12 md:col-6 lg:col-3">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-    </div>
-    <div class="col-12 md:col-6 lg:col-3">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-    </div>
-    <div class="col-12 md:col-6 lg:col-3">
-        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
-    </div> -->
 </div>

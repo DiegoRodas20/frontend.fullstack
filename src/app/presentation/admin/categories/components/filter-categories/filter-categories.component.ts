@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-filter-categories',
@@ -7,15 +8,27 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 export class FilterCategoriesComponent {
 
-    @Input() prueba: string = ''
-    @Output() pruebaSalida = new EventEmitter<string>()
+    formGroup: FormGroup | undefined;
 
     constructor() { }
 
     ngOnInit() {
+        this.setFormFilter()
+        this.subscribeForm()
     }
 
-    public setOutput(){
-        this.pruebaSalida.emit('MOISES')
+    setFormFilter() {
+        this.formGroup = new FormGroup({
+            name: new FormControl<string>(''),
+            name1: new FormControl<string>(''),
+            name2: new FormControl<string>(''),
+            name3: new FormControl<string>('')
+        })
+    }
+
+    subscribeForm() {
+        this.formGroup?.valueChanges.subscribe(value => {
+            console.log('VALOR', value)
+        })
     }
 }
